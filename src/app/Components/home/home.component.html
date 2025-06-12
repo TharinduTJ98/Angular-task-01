@@ -1,0 +1,11 @@
+<h2>Home Compoent</h2>
+<!-- <app-user [userMessage]="'iwonder'"  (message)="displayAlertMessage($event)"></app-user> -->
+<button (click)="navigateToUser()">Navigate to User</button>
+<nav>
+    <ul>
+        <li><a routerLink="template-driven/1">Template driven</a></li>
+        <li><a routerLink="reactive-form/2">Reactive Form</a></li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>
+
