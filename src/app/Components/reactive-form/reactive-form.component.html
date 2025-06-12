@@ -1,0 +1,18 @@
+<h3 appHighlightDurective>Reactive Form</h3>
+
+<form *ngIf="!submitted" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <label>Name:</label>
+  <input type="text" formControlName="name" />
+  <br />
+
+  <label>Email:</label>
+  <input type="email" formControlName="email" />
+  <br />
+
+  <button type="submit" [disabled]="userForm.invalid">Submit</button>
+</form>
+
+<p *ngIf="submitted">
+  User Name is: {{ userForm.value.name }}<br />
+  User Email is: {{ userForm.value.email }}
+</p>
